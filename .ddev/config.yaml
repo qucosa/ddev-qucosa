@@ -1,0 +1,26 @@
+name: qucosa
+type: typo3
+docroot: public
+php_version: "7.2"
+webserver_type: apache-fpm
+router_http_port: "80"
+router_https_port: "443"
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+  type: mariadb
+  version: "10.2"
+nfs_mount_enabled: false
+mutagen_enabled: false
+use_dns_when_possible: true
+composer_version: "2"
+web_environment:
+ - TYPO3_CONTEXT=Development
+hooks:
+  post-import-db:
+   - exec: "vendor/bin/typo3cms database:updateschema"
+   - exec: "vendor/bin/typo3cms cleanup:updatereferenceindex"
+  pre-stop:
+    - exec: rm fcrepo-home/data/*.lock.db
+      service: fcrepo
