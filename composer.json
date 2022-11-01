@@ -43,7 +43,7 @@
 		"subugoe/find": "^3.1",
 		"solarium/solarium": "~4.2.0",
 		"kitodo/publication": "^5.0.0",
-		"slub/slub-web-qucosa": "dev-master"
+		"slub/slub-web-qucosa": "dev-master@dev"
 	},
 	"scripts": {
 		"typo3-cms-scripts": [
