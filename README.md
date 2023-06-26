@@ -1,6 +1,6 @@
 # DDEV Development Environment
 
-This repository provides a Qucosa development environment powered by DDEV. For more information check out the DDEV documentation.
+This repository provides a Qucosa development environment powered by [DDEV](https://ddev.com). For more information check out the [DDEV documentation](https://ddev.readthedocs.io/).
 
 ## Start and Configuration
 
